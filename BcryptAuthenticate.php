@@ -83,8 +83,7 @@ class BcryptAuthenticate extends FormAuthenticate {
 			return false;
 		}
 		
-		
-		// Remove the password from the user field for security reasons
+		// Remove the password from the user array for security reasons
 		unset($result[$model][$fields['password']]);
 		return $result[$model];
 	}
