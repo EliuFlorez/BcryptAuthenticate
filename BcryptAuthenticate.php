@@ -40,10 +40,8 @@ class BcryptAuthenticate extends FormAuthenticate {
 	}
 
 	/**
-	 * Overrides _findUser to also find users with an old sha1-password.
-	 *
-	 * If such a user is found, the password is Bcrypt-hashed instead
-	 * and saved to the database.
+	 * Overrides _findUser to always fetch the user, which is
+	 * necessary to check the Bcrypt password.
 	 *
 	 * @param string $username
 	 * @param string $password
